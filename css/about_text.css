@@ -1,0 +1,101 @@
+/* ==== TEAM SHOWCASE (ẢNH + VIDEO) ==== */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 5rem auto;
+  position: relative;
+}
+
+/* Track chung cho cả ảnh & video */
+.carousel-track,
+.carousel-track-video {
+  display: flex;
+  gap: 2.5rem;
+  animation: slideLoop 40s linear infinite;
+  will-change: transform;
+}
+
+/* ẢNH */
+.carousel-track img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  flex-shrink: 0;
+  border: 3px solid var(--main-color);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel-track img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* VIDEO */
+.carousel-track-video iframe {
+  width: 22rem;
+  height: 40rem;
+  border-radius: 1.2rem;
+  flex-shrink: 0;
+  border: 3px solid var(--main-color);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carousel-track-video iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Animation chung cho cả ảnh & video */
+@keyframes slideLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ==== Pause khi hover ==== */
+.carousel-track:hover,
+.carousel-track-video:hover {
+  animation-play-state: paused;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 1024px) {
+  .carousel-track img {
+    width: 16rem;
+    height: 16rem;
+  }
+  .carousel-track-video iframe {
+    width: 18rem;
+    height: 32rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-track img {
+    width: 14rem;
+    height: 14rem;
+  }
+  .carousel-track-video iframe {
+    width: 16rem;
+    height: 30rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-track img {
+    width: 12rem;
+    height: 12rem;
+  }
+  .carousel-track-video iframe {
+    width: 14rem;
+    height: 26rem;
+  }
+}
+/* ==== END TEAM SHOWCASE ==== */

@@ -1,0 +1,40 @@
+.footer {
+  background: var(--main-color);
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.footer .social {
+  margin: 1.8rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer .social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 2px solid var(--button-color);
+  border-radius: 50%;
+  color: var(--button-color);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer .social a:hover {
+  background: var(--main-color);
+  color: black;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--main-color);
+}
+
+
+.footer p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}

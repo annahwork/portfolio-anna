@@ -1,0 +1,99 @@
+/* ===== About Section ===== */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 6rem 8%;
+  background: var(--snd-bg-color);
+}
+
+
+.about-img img {
+  width: 260px;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+.about-content {
+  flex: 1 1 480px;
+  max-width: 640px;
+}
+
+
+.about-content h2.heading {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.about-content h2 span {
+  color: #4a90e2;
+}
+
+
+.about-content h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+
+.about-content p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #2e4857;
+  margin-bottom: 2.4rem;
+  text-align: left;
+}
+
+
+.about-content .btn {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  background: var(--main-color);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.about-content .btn:hover {
+  background: black;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 5rem 6%;
+  }
+
+  .about-content h2.heading {
+    text-align: center;
+  }
+
+  .about-content p {
+    text-align: left;
+  }
+
+  .about-img img {
+    width: 220px;
+  }
+}
+
