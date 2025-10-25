@@ -1,10 +1,10 @@
-
 .project {
-  background:var(--snd-bg-color);
+  background: var(--snd-bg-color);
   padding: 6rem 2rem;
   text-align: center;
 }
 
+/* === TIÊU ĐỀ === */
 .project .heading {
   font-size: 3.2rem;
   font-weight: 700;
@@ -13,15 +13,16 @@
 }
 
 .project .heading span {
-  color:  #4a90e2
+  color: #4a90e2;
 }
 
+/* === NÚT CHỌN PROJECT === */
 .project-buttons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .project-btn {
@@ -42,6 +43,43 @@
   color: var(--bg-color);
 }
 
+/* === MÔ TẢ DỰ ÁN CHUNG (BOX DƯỚI NÚT) === */
+.project-description {
+  margin: 2rem auto 3rem;
+  max-width: 850px;
+  text-align: center;
+  position: relative;
+  min-height: 120px; /* giữ không gian khi chuyển tab */
+}
+
+.desc-item {
+  display: none;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: #333;
+  background: #f7fbff;
+  border: 1px solid #dbe9f7;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.desc-item.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  background: #eaf6ff;
+  border-color: #a7c7e7;
+  position: relative;
+}
+
+/* === NHÓM PROJECT === */
 .project-wrapper {
   position: relative;
   min-height: 300px;
@@ -65,15 +103,13 @@
   transform: translateY(0);
 }
 
-
+/* === THẺ THÀNH VIÊN === */
 .project-item {
   background: var(--bg-color);
   border-radius: 1.5rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   padding: 2.5rem 2rem;
   transition: all 0.3s ease;
-  width: 100%;
-  max-width: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,10 +117,8 @@
   text-align: center;
 }
 
-
 .project-item:hover {
   transform: scale(1.03);
-  border-color: var(--main-color);
   box-shadow: 0 0 25px rgba(100, 180, 160, 0.4);
 }
 
@@ -114,6 +148,26 @@
   min-height: 3.5rem;
 }
 
+/* === MÔ TẢ THÀNH VIÊN === */
+.project-desc {
+  margin-top: 1rem;
+  background: #f8fbff;
+  border-left: 3px solid var(--main-color);
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.project-item:hover .project-desc {
+  background: #eaf6ff;
+}
+
+/* === RESPONSIVE === */
 @media (max-width: 992px) {
   .project .heading {
     font-size: 4rem;
@@ -130,6 +184,9 @@
   .project-item img {
     width: 13rem;
     height: 13rem;
+  }
+  .project-description {
+    min-height: 160px; /* tăng để mô tả không bị cắt */
   }
 }
 
